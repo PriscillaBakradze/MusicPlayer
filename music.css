@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    list-style: none;
+}
+
+body {
+    font-family: 'Joan', serif;
+    height: 100vh;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    animation: changeBg 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0,0,0,.9);
+    background: white;
+    width: 40%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;
+    overflow: auto;
+}
+
+#display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    position: absolute;
+}
+
+p {
+    margin-left: 18px;
+}
+
+#cover {
+    height: 250px;
+    margin-right: 200px;
+    margin-top: 30px;
+}
+
+.header {
+    margin-right: 200px;
+    margin-top: 50px;
+}
+
+#audio {
+    margin-right: 200px;
+}
+
+#lists {
+    margin-left: 400px;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+.item {
+    margin: 7px;
+    transition: all .3s ease;
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+.is-active {
+    background: -webkit-linear-gradient(#EE7752, #23A6D5, #E73C7E, #23D5AB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+}
+
+@keyframes changeBg {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/*Responsive Design*/
+@media only screen and (max-width: 1900px){
+    #audio{
+        width: 220px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    #container {
+        width: 60%;
+        height: 60%;
+        margin-left: 80px;
+    }
+    #audio{
+        width: 220px;
+        margin-left: 15px;
+    }
+    #display{
+        margin-left: 150px;
+    }
+}
